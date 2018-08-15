@@ -1,72 +1,62 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
   <head>
     <meta charset="utf-8">
-    <title>campingSiteList</title>
+    <title>전국캠핑장</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=6C2Qr_z_RdFCIkcbB3Yq"></script>
+
+
+    </script>
     <style media="screen">
-      body{
-
+      /*header*/
+      .flex-row{
+        display:flex;
+        justify-content: space-between;
+        /*좌우로 컨텐츠 밀착 정렬*/
       }
-      .flex-display-row{
-        display: flex;
-        width: 100%;
+      nav ul{
+        list-style-type: none;
+        padding: 0px;
+        display: none;
       }
-      .flex-display-column{
-        display: flex;
-        flex-direction: column;
+      nav img{
+        width: 1.38em;
+        display:none;
       }
-      #main-nav{
-        padding: 10px;
-        border: 1px solid red;
-        width: 100%;
-        text-align: center;
-
-      }
-      .main-view{
-        padding: 30px;
-        border: 1px solid black;
-        width: 100%;
-        text-align: center;
+      /*메뉴클릭하면 이미지 안보이게하고 메뉴 보이게*/
+      nav img:active, nav ul{
+        display: block;
       }
 
+      /*footer*/
       footer{
         text-align: center;
-        padding: 20px;
-      }
-      a{
-        text-decoration: none;
-        color: black;
-      }
-
-      @media query {
-
-
       }
     </style>
     <script type="text/javascript">
-      function startSearch() {
-        document.writh("fff");
-      }
-
+      /*naver mpas api 6C2Qr_z_RdFCIkcbB3Yq*/
     </script>
   </head>
   <body>
-    <div class="flex-display-row">
-      <nav id="main-nav">
-        <a href="#"><h1>전국 캠핑장 목록</h1></a>
+    <div class="flex-row">
+      <h3>전국캠핑장</h3>
+      <nav>
+        <h3><img src="/img/if_menu-alt_134216.png" alt="menu"></h3>
+        <ul>
+          <li>지역</li>
+          <li>요금별</li>
+        </ul>
       </nav>
-      <div class="main-view">
-        <form class="" action=startSearch() method="post">
-          <label for=""></label>
-          <input type="text" name="" value="찾기">
-        </form>
-      </div>
-    </div> <!-- /.flex-display-row -->
-    <div class="flex-display-column">
-      googlemap
-
     </div>
+    <div id="map" style="width:100%;height:400px;"></div>
 
-    <footer><hr>2018 hojin</footer>
+    <footer><hr>2018 hojin powered by github</footer>
+
+    <!-- after load js -->
+    <script src="naverMapsAPI.js"></script>
   </body>
 </html>
