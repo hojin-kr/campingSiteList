@@ -9,7 +9,7 @@
     crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=6C2Qr_z_RdFCIkcbB3Yq"></script>
 
-    <style>
+    <style media="screen">
 
       /*header*/
       .flex-row{
@@ -24,11 +24,11 @@
       }
       nav img{
         width: 1.38em;
-        display:none;
+
       }
       /*메뉴클릭하면 이미지 안보이게하고 메뉴 보이게*/
-      nav img:active, nav ul{
-        display: block;
+      nav img:active{
+        display: none;
       }
 
       /*footer*/
@@ -36,6 +36,17 @@
         text-align: center;
       }
     </style>
+
+    <style media="screen and (max-width: 500px)">
+      nav img{
+        width: 2em;
+      }
+      h3{
+        font-size: 2em;
+      }
+    </style>
+
+
     <script type="text/javascript">
       /*naver mpas api 6C2Qr_z_RdFCIkcbB3Yq*/
     </script>
