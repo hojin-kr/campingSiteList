@@ -1,23 +1,40 @@
 
-//전체화면지도와 미니맵
-// size 옵션이 생략되면 map DOM 요소의 HTML 렌더링 크기로 자동 리사이즈 됩니다.
 function naverMap(){
-  var map = new naver.maps.Map('map', {
-      center: new naver.maps.LatLng(37.5666805, 126.9784147),
-      zoom: 8,
-      minZoom: 1,
-      mapTypeId: naver.maps.MapTypeId.NORMAL,
-      zoomControl: false,
-      zoomControlOptions: {
-          position: naver.maps.Position.TOP_RIGHT
-      },
-      disableKineticPan: false
+  var map = new naver.maps.Map(document.getElementById('map'), {
+      zoom: 7,
+      center: new naver.maps.LatLng(37.3614483, 129.1114883)
   });
 
-  map.setOptions({
-      mapTypeControl: false,
-      scaleControl: false,
-      logoControl: false
-  });
+  var latlngs = [
+      new naver.maps.LatLng(37.3633324, 129.1054988),
+      new naver.maps.LatLng(37.3632916, 129.1085015),
+      new naver.maps.LatLng(37.3632507, 129.1115043),
+      new naver.maps.LatLng(37.3632097, 129.114507),
+      new naver.maps.LatLng(37.3631687, 129.1175097),
+      new naver.maps.LatLng(37.3597282, 129.105422),
+      new naver.maps.LatLng(37.3596874, 129.1084246),
+      new naver.maps.LatLng(37.3596465, 129.1114272),
+      new naver.maps.LatLng(37.3596056, 129.1144298),
+      new naver.maps.LatLng(37.3595646, 129.1174323)
+  ];
+
+  var markerList = [];
+
+  for (var i=0, ii=latlngs.length; i<ii; i++) {
+      var icon = {
+              url: 'sp_pins_spot_v3.png',
+              size: new naver.maps.Size(24, 37),
+              anchor: new naver.maps.Point(12, 37),
+              origin: new naver.maps.Point(i * 29, 0)
+          },
+          marker = new naver.maps.Marker({
+              position: latlngs[i],
+              map: map,
+              icon: icon
+          });
+
+      markerList.push(marker);
+
+  }
 
 }
