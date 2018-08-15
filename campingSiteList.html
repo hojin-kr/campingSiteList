@@ -12,14 +12,16 @@
 
     <style>
       body{
-        width: 100%;
         font-family: 'Nanum Gothic', sans-serif;
       }
       /*header*/
       .flex-row{
         display:flex;
-        /*justify-content: space-between;*/
+        justify-content: space-between;
         /*좌우로 컨텐츠 밀착 정렬*/
+      }
+      .flex-row img{
+        width: 1.37em;
       }
       a{
         text-decoration: none;
@@ -33,6 +35,7 @@
         display: inline;
       }
 
+
       /*footer*/
       footer{
         text-align: center;
@@ -44,14 +47,19 @@
   <body>
     <div class="flex-row">
       <h1>전국캠핑장<small></small></h1>
+      <h1><img src="if_menu-alt_134216.png" alt="if_menu-alt_134216"></h1>
     </div>
-    <img src="if_camping_hand_drawn_icon_-17_3251291.png" alt="if_camping_hand_drawn_icon_-17_3251291" onclick="allCampingSiteOnMap()">
-    <img src="if_camping_hand_drawn_icon_-12_3251276.png" alt="if_camping_hand_drawn_icon_-12_3251276" onclick="noCarCampingSiteOnMap()">
-    <img src="if_camping_hand_drawn_icon_-04_3251302.png" alt="if_camping_hand_drawn_icon_-04_3251302" onclick="carCampingSiteOnMap()">
+    <div class="playground">
+      <img src="if_camping_hand_drawn_icon_-17_3251291.png" alt="if_camping_hand_drawn_icon_-17_3251291" onclick="allCampingSiteOnMap()">
+      <img src="if_camping_hand_drawn_icon_-12_3251276.png" alt="if_camping_hand_drawn_icon_-12_3251276" onclick="noCarCampingSiteOnMap()">
+      <img src="if_camping_hand_drawn_icon_-04_3251302.png" alt="if_camping_hand_drawn_icon_-04_3251302" onclick="carCampingSiteOnMap()">
+    </div>
+
     <hr>
     <footer>2018 hojin powered by github</footer>
 
     <!-- after load js -->
+    <script type="text/javascript" src="naverMapsAPI.js"></script>
     <script type="text/javascript" src="dataGet.js"></script>
     <script type="text/javascript" src="campingSiteOnMap.js"></script>
   </body>
