@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <title>campingSiteList</title>
+    <style media="screen">
+      body{
+
+      }
+      .flex-display-row{
+        display: flex;
+        width: 100%;
+      }
+      .flex-display-column{
+        display: flex;
+        flex-direction: column;
+      }
+      #main-nav{
+        padding: 10px;
+        border: 1px solid red;
+        width: 100%;
+        text-align: center;
+
+      }
+      .main-view{
+        padding: 30px;
+        border: 1px solid black;
+        width: 100%;
+        text-align: center;
+      }
+
+      footer{
+        text-align: center;
+        padding: 20px;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+
+      @media query {
+
+
+      }
+    </style>
+    <script type="text/javascript">
+      function startSearch() {
+        document.writh("fff");
+      }
+
+    </script>
+  </head>
+  <body>
+    <div class="flex-display-row">
+      <nav id="main-nav">
+        <a href="#"><h1>전국 캠핑장 목록</h1></a>
+      </nav>
+      <div class="main-view">
+        <form class="" action=startSearch() method="post">
+          <label for=""></label>
+          <input type="text" name="" value="찾기">
+        </form>
+      </div>
+    </div> <!-- /.flex-display-row -->
+    <div class="flex-display-column">
+      googlemap
+
+    </div>
+
+    <footer><hr>2018 hojin</footer>
+  </body>
+</html>
