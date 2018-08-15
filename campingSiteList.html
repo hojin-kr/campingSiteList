@@ -3,69 +3,54 @@
   <head>
     <meta charset="utf-8">
     <title>전국캠핑장</title>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
     <script
-    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
-    crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=6C2Qr_z_RdFCIkcbB3Yq"></script>
 
-    <style media="screen">
-
+    <style>
+      body{
+        font-family: 'Nanum Gothic', sans-serif;
+      }
       /*header*/
       .flex-row{
         display:flex;
         justify-content: space-between;
         /*좌우로 컨텐츠 밀착 정렬*/
       }
+      a{
+        text-decoration: none;
+        color: black;
+      }
       nav ul{
         list-style-type: none;
         padding: 0px;
-        display: none;
       }
-      nav img{
-        width: 1.38em;
-
-      }
-      /*메뉴클릭하면 이미지 안보이게하고 메뉴 보이게*/
-      nav img:active{
-        display: none;
+      nav li{
+        display: inline;
       }
 
       /*footer*/
       footer{
         text-align: center;
       }
-      @media screen and (max-width: 700px) {
-        nav img{
-          width: 2em;
-        }
-        h3{
-          font-size: 2em;
-        }
-      }
-
     </style>
 
-    <script type="text/javascript">
-      /*naver mpas api 6C2Qr_z_RdFCIkcbB3Yq*/
-    </script>
   </head>
   <body>
     <div class="flex-row">
-      <h3>전국캠핑장</h3>
-      <nav>
-        <h3><img src="if_menu-alt_134216.png" alt="menu"></h3>
-        <ul>
-          <li>지역</li>
-          <li>요금별</li>
-        </ul>
-      </nav>
+      <h1>전국캠핑장</h1>
     </div>
-    <div id="map" style="width:100%;height:400px;"></div>
-
-    <footer><hr>2018 hojin powered by github</footer>
+    <img src="if_camping_hand_drawn_icon_-17_3251291.png" alt="if_camping_hand_drawn_icon_-17_3251291" onclick="allCampingSiteOnMap()">
+    <img src="if_camping_hand_drawn_icon_-12_3251276.png" alt="if_camping_hand_drawn_icon_-12_3251276">
+    <img src="if_camping_hand_drawn_icon_-04_3251302.png" alt="if_camping_hand_drawn_icon_-04_3251302">
+    <hr>
+    <footer>2018 hojin powered by github</footer>
 
     <!-- after load js -->
-    <script src="naverMapsAPI.js"></script>
+    <script type="text/javascript" src="dataGet.js"></script>
+    <script type="text/javascript" src="allCampingSiteOnMap.js"></script>
   </body>
 </html>
