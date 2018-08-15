@@ -1,7 +1,6 @@
 function allCampingSiteOnMap(){
   /*소제목 치환*/
-  var smallTitle = "<small> : 모든 캠핑장</small>";
-  $(smallTitle).replaceAll("small");
+  $("<small> : 모든 캠핑장</small>").replaceAll("small");
 
   /*ajax로 json 데이터 가져옴*/
   $.ajax({
@@ -9,7 +8,10 @@ function allCampingSiteOnMap(){
   })
   .done(function(json){
       console.log("요청성공");
-
+      console.log(json);
+      $("<div id='map' style='width: 99%; height: 500px;'></div>").replaceAll(".playground");
+      //매개변수로 json 좌표 데이터 전달해서 출력 가능?
+      naverMap();
   })
   .fail(function(){
     console.log("요청실패");
@@ -23,8 +25,7 @@ function allCampingSiteOnMap(){
 
 function carCampingSiteOnMap(){
   /*소제목 치환*/
-  var smallTitle = "<small> : 자동차 캠핑장</small>";
-  $(smallTitle).replaceAll("small");
+  $("<small> : 자동차 캠핑장</small>").replaceAll("small");
 
   /*ajax로 json 데이터 가져옴*/
   $.ajax({
@@ -44,8 +45,7 @@ function carCampingSiteOnMap(){
 
 function noCarCampingSiteOnMap(){
   /*소제목 치환*/
-  var smallTitle = "<small> : 캠핑장</small>";
-  $(smallTitle).replaceAll("small");
+  $("<small> : 캠핑장</small>").replaceAll("small");
 
   /*ajax로 json 데이터 가져옴*/
   $.ajax({
