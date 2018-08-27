@@ -2,4 +2,4 @@
 korea campingsite LIst
 
 ## GitHub Pages 
-https://hojin-kr.github.io/campingSiteList.html/
+https://hojin-kr.github.io/campingSiteList/campingSiteList.html
