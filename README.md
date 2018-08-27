@@ -1,6 +1,6 @@
 # campingSiteList
-korea campingsite LIst
-
+- korea campingsite LIst
+- Only using web front-language & GitHub pages , purposed not using personal server device.
 ## Tec
 - html
 - css
