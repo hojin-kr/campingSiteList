@@ -15,6 +15,7 @@ function allCampingSiteOnMap(){
       var map = new naver.maps.Map(document.getElementById('map'), {
           zoom: 7,
           center: new naver.maps.LatLng(json.records[0].위도, json.records[0].경도)
+        /* [수정예정] center는 HTML5 GEO 정보 받아와서 현재 위치로 설정하도록*/
       });
 
       var latlngs = [];
@@ -34,6 +35,7 @@ function allCampingSiteOnMap(){
 */
       for(var j= 0; j< json.records.length; j++){
         latlngs[j] = new naver.maps.LatLng(json.records[j].위도, json.records[j].경도);
+        /*위도와 경도 정보를 객체로 저장하여 marker의 위치(position)으로 사용할 */
       }
 
       var markerList = [];
